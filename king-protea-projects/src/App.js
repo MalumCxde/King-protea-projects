@@ -1,5 +1,5 @@
-// src/App.js
-import React from 'react';
+// src/App.jsx
+import React, { useState } from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
 import Services from './components/Services';
@@ -8,12 +8,18 @@ import Testimonials from './components/Testimonials';
 import About from './components/About';
 import Quote from './components/Quote';
 import Footer from './components/Footer';
-import './styles/styles.css'; // Ensure this path is correct
+import './styles/styles.css';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <div className="App">
-      <Header />
+    <div className={darkMode ? 'app dark-mode' : 'app'}>
+      <Header toggleDarkMode={toggleDarkMode} />
       <main>
         <Home />
         <Services />
@@ -28,3 +34,4 @@ function App() {
 }
 
 export default App;
+

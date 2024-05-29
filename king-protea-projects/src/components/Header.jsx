@@ -1,7 +1,8 @@
+// src/components/Header.jsx
 import React from 'react';
-import '../styles/styles.css'; // Correct path to styles.css
+import '../styles/styles.css';
 
-function Header() {
+function Header({ toggleDarkMode }) {
   return (
     <header>
       <div className="logo">King Protea Projects</div>
@@ -15,9 +16,13 @@ function Header() {
           <li><a href="#quote">Request a Quote</a></li>
         </ul>
       </nav>
+      <button className="dark-mode-toggle" onClick={toggleDarkMode}>
+        Toggle Dark Mode
+      </button>
     </header>
   );
 }
 
 export default Header;
+
 
