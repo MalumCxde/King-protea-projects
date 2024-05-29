@@ -1,4 +1,4 @@
-// App.js
+// src/App.js
 import React from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -6,9 +6,9 @@ import Services from './components/Services';
 import Team from './components/Team';
 import Testimonials from './components/Testimonials';
 import About from './components/About';
-import Quote from './components/Quotes';
+import Quote from './components/Quote';
 import Footer from './components/Footer';
-import './styles/styles.css';
+import './styles/styles.css'; // Ensure this path is correct
 
 function App() {
   return (

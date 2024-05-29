@@ -1,6 +1,5 @@
-// Header.js
 import React from 'react';
-import './styles/styles.css'; 
+import '../styles/styles.css'; // Correct path to styles.css
 
 function Header() {
   return (
@@ -21,3 +20,4 @@ function Header() {
 }
 
 export default Header;
+
