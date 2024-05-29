@@ -6,7 +6,7 @@ import Services from './components/Services';
 import Team from './components/Team';
 import Testimonials from './components/Testimonials';
 import About from './components/About';
-import Quote from './components/Quote';
+import Quote from './components/Quotes';
 import Footer from './components/Footer';
 import './styles/styles.css';
 
