@@ -5,7 +5,7 @@ import '../styles/styles.css'; // Ensure this path is correct
 function Quote() {
   return (
     <section id="quote">
-      <h2>Request a Quote</h2>
+      <h2>Request A Quote</h2>
       <form>
         <label htmlFor="name">Name:</label>
         <input type="text" id="name" name="name" required />
