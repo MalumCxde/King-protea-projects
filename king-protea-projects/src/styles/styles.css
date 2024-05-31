@@ -109,11 +109,11 @@ body {
   
   /* Home Section */
   #home .hero {
-    background-image: url('https://via.placeholder.com/1500x500'); /* Placeholder image */
-    background-size: cover;
+    background-image: url('C:\Users\malum\Documents\FCCSurveyPage\King-protea-projects\king-protea-projects\images\home.webp'); 
+    background-size: auto;
     background-position: center;
     text-align: center;
-    padding: 100px 20px;
+    padding: 100px 40px;
     color: #fff;
   }
   
