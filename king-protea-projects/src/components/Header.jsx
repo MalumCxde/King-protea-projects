@@ -17,7 +17,7 @@ function Header({ toggleDarkMode }) {
         </ul>
       </nav>
       <button className="dark-mode-toggle" onClick={toggleDarkMode}>
-        Toggle Dark Mode
+        Dark Mode
       </button>
     </header>
   );
