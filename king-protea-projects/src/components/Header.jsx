@@ -1,9 +1,12 @@
 // src/components/Header.jsx
 import React from 'react';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../styles/styles.css';
 
 function Header({ toggleDarkMode }) {
   return (
+    
     <header>
       <div className="logo">King Protea Projects</div>
       <nav>
@@ -17,8 +20,9 @@ function Header({ toggleDarkMode }) {
         </ul>
       </nav>
       <button className="dark-mode-toggle" onClick={toggleDarkMode}>
-        Dark Mode
+      <FontAwesomeIcon icon="fa-solid fa-moon" />
       </button>
+      
     </header>
   );
 }

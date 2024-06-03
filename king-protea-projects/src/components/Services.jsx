@@ -1,6 +1,6 @@
 // src/components/Services.js
 import React from 'react';
-import '../styles/styles.css'; // Ensure this path is correct
+import '../styles/styles.css'; 
 
 function Services() {
   return (
@@ -10,8 +10,7 @@ function Services() {
         <li>Architecture</li>
         <li>Interior Design</li>
         <li>Landscape Design</li>
-        <li>Urban Planning</li>
-        <li>Sustainability</li>
+        <li>Maintenance</li>
       </ul>
     </section>
   );

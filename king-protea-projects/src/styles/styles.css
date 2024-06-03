@@ -2,263 +2,387 @@
 
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
-  }
-  
-  .app.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-  }
-  
-  /* Header Styles */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.app.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Header Styles */
+header {
+  background-color: #006400;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #ffcc00;
+}
+
+.app.dark-mode header nav ul li a {
+  color: #e0e0e0;
+}
+
+header .dark-mode-toggle {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header .dark-mode-toggle:hover {
+  background-color: #fff;
+  color: #006400;
+}
+
+.app.dark-mode header .dark-mode-toggle {
+  border-color: #e0e0e0;
+  color: #e0e0e0;
+}
+
+.app.dark-mode header .dark-mode-toggle:hover {
+  background-color: #e0e0e0;
+  color: #1f1f1f;
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+}
+
+.app.dark-mode main {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.app.dark-mode section {
+  background-color: #1f1f1f;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Home Section */
+#home .hero {
+  background-image: url(C:\Users\malum\Documents\FCCSurveyPage\King-protea-projects\king-protea-projects\images\home.webp); /* Placeholder image */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 100px 20px;
+  color: #fff;
+}
+
+#home .hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#home .hero p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+#home .hero .cta-button {
+  padding: 15px 30px;
+  background-color: #ffcc00;
+  color: #006400;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#home .hero .cta-button:hover {
+  background-color: #ffd700;
+}
+
+.app.dark-mode #home .hero {
+  color: #e0e0e0;
+}
+
+#home .overview {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#home .overview h2 {
+  font-size: 36px;
+  color: #006400;
+  margin-bottom: 20px;
+}
+
+#home .overview p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Services Section */
+#services h2,
+#team h2,
+#testimonials h2,
+#about h2,
+#quote h2 {
+  font-size: 28px;
+  color: #006400;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+#services ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#services ul li {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Team Section */
+#team p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Testimonials Section */
+#testimonials p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* About Section */
+#about p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Quote Section */
+#quote form {
+  display: flex;
+  flex-direction: column;
+}
+
+#quote label {
+  font-size: 18px;
+  color: #006400;
+  margin-bottom: 5px;
+}
+
+#quote input,
+#quote textarea {
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#quote button {
+  padding: 10px 20px;
+  background-color: #006400;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#quote button:hover {
+  background-color: #004d00;
+}
+
+.app.dark-mode #quote button {
+  background-color: #333;
+}
+
+.app.dark-mode #quote button:hover {
+  background-color: #444;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #006400;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.app.dark-mode footer {
+  background-color: #1f1f1f;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   header {
-    background-color: #006400;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .app.dark-mode header {
-    background-color: #1f1f1f;
-  }
-  
-  header .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
+
   header nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
+
   header nav ul li {
-    margin-right: 20px;
+    margin: 10px 0;
   }
-  
-  header nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s;
-  }
-  
-  header nav ul li a:hover {
-    color: #ffcc00;
-  }
-  
-  .app.dark-mode header nav ul li a {
-    color: #e0e0e0;
-  }
-  
-  header .dark-mode-toggle {
-    background: none;
-    border: 2px solid #fff;
-    border-radius: 5rem;
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  header .dark-mode-toggle:hover {
-    background-color: #fff;
-    color: #006400;
-  }
-  
-  .app.dark-mode header .dark-mode-toggle {
-    border-color: #e0e0e0;
-    color: #e0e0e0;
-  }
-  
-  .app.dark-mode header .dark-mode-toggle:hover {
-    background-color: #e0e0e0;
-    color: #1f1f1f;
-  }
-  
-  /* Main Content Styles */
+
   main {
-    padding: 20px;
+    padding: 10px;
   }
-  
-  .app.dark-mode main {
-    background-color: #121212;
-    color: #e0e0e0;
-  }
-  
-  section {
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .app.dark-mode section {
-    background-color: #1f1f1f;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  }
-  
-  /* Home Section */
-  #home .hero {
-    background-image: url('C:\Users\malum\Documents\FCCSurveyPage\King-protea-projects\king-protea-projects\images\home.webp'); 
-    background-size: auto;
-    background-position: center;
-    text-align: center;
-    padding: 100px 40px;
-    color: #fff;
-  }
-  
+
   #home .hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-  }
-  
-  #home .hero p {
-    font-size: 24px;
-    margin-bottom: 40px;
-  }
-  
-  #home .hero .cta-button {
-    padding: 15px 30px;
-    background-color: #ffcc00;
-    color: #006400;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  #home .hero .cta-button:hover {
-    background-color: #ffd700;
-  }
-  
-  .app.dark-mode #home .hero {
-    color: #e0e0e0;
-  }
-  
-  #home .overview {
-    text-align: center;
-    padding: 50px 20px;
-  }
-  
-  #home .overview h2 {
     font-size: 36px;
-    color: #006400;
-    margin-bottom: 20px;
   }
-  
-  #home .overview p {
+
+  #home .hero p {
     font-size: 18px;
-    color: #555;
   }
-  
-  /* Services Section */
+
+  #home .hero .cta-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  #home .overview h2 {
+    font-size: 28px;
+  }
+
+  #home .overview p {
+    font-size: 16px;
+  }
+
   #services h2,
   #team h2,
   #testimonials h2,
   #about h2,
   #quote h2 {
-    font-size: 28px;
-    color: #006400;
-    border-bottom: 2px solid #ffcc00;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    font-size: 24px;
   }
-  
-  #services ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
+
   #services ul li {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 10px;
+    font-size: 16px;
   }
-  
-  /* Team Section */
-  #team p {
-    font-size: 18px;
-    color: #555;
-  }
-  
-  /* Testimonials Section */
-  #testimonials p {
-    font-size: 18px;
-    color: #555;
-  }
-  
-  /* About Section */
-  #about p {
-    font-size: 18px;
-    color: #555;
-  }
-  
-  /* Quote Section */
-  #quote form {
-    display: flex;
-    flex-direction: column;
-  }
-  
+
+  #team p,
+  #testimonials p,
+  #about p,
   #quote label {
-    font-size: 18px;
-    color: #006400;
-    margin-bottom: 5px;
+    font-size: 16px;
   }
-  
+
   #quote input,
   #quote textarea {
-    font-size: 16px;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    font-size: 14px;
   }
-  
+
   #quote button {
-    padding: 10px 20px;
-    background-color: #006400;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 16px;
   }
-  
-  #quote button:hover {
-    background-color: #004d00;
+}
+
+@media (max-width: 480px) {
+  header .logo {
+    font-size: 20px;
   }
-  
-  .app.dark-mode #quote button {
-    background-color: #333;
+
+  header .dark-mode-toggle {
+    padding: 5px;
+    font-size: 14px;
   }
-  
-  .app.dark-mode #quote button:hover {
-    background-color: #444;
+
+  #home .hero h1 {
+    font-size: 28px;
   }
-  
-  /* Footer Styles */
-  footer {
-    background-color: #006400;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+
+  #home .hero p {
+    font-size: 14px;
   }
-  
-  .app.dark-mode footer {
-    background-color: #1f1f1f;
+
+  #home .hero .cta-button {
+    padding: 8px 16px;
+    font-size: 14px;
   }
-  
+
+  #home .overview h2 {
+    font-size: 24px;
+  }
+
+  #home .overview p {
+    font-size: 14px;
+  }
+
+  #services h2,
+  #team h2,
+  #testimonials h2,
+  #about h2,
+  #quote h2 {
+    font-size: 20px;
+  }
+
+  #services ul li {
+    font-size: 14px;
+  }
+
+  #team p,
+  #testimonials p,
+  #about p,
+  #quote label {
+    font-size: 14px;
+  }
+
+  #quote input,
+  #quote textarea {
+    font-size: 12px;
+  }
+
+  #quote button {
+    font-size: 14px;
+  }
+}

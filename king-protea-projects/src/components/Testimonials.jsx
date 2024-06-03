@@ -1,6 +1,6 @@
 // src/components/Testimonials.js
 import React from 'react';
-import '../styles/styles.css'; // Ensure this path is correct
+import '../styles/styles.css'; 
 
 function Testimonials() {
   return (
