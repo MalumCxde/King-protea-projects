@@ -1,12 +1,17 @@
 // src/components/Home.jsx
 import React from 'react';
+
 import '../styles/styles.css'; 
 
 function Home() {
   return (
     <section id="home">
       <div className="hero">
-        <h1>King Protea Projects</h1>
+      
+      <h1>
+        
+        King Protea Projects
+      </h1>
         <p>Where nature meets design.</p>
         <button className="cta-button">Get a Free Quote</button>
       </div>

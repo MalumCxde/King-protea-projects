@@ -1,32 +1,53 @@
 // src/components/Header.jsx
-import React from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import '../styles/styles.css';
 
-function Header({ toggleDarkMode }) {
+const Header = () => {
+  const [navOpen, setNavOpen] = useState(false);
+
+  const handleNavToggle = () => {
+    setNavOpen(!navOpen);
+  };
+
+  const handleNavItemClick = () => {
+    setNavOpen(false);
+  };
+
   return (
-    
     <header>
-      <div className="logo">King Protea Projects</div>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#team">Our Team</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#quote">Request a Quote</a></li>
-        </ul>
-      </nav>
-      <button className="dark-mode-toggle" onClick={toggleDarkMode}>
-      <FontAwesomeIcon icon="fa-solid fa-moon" />
-      </button>
-      
+      <div className="header-content">
+        <div className="logo">King Protea Projects</div>
+        <FontAwesomeIcon
+          icon={faBars}
+          className={`nav-icon ${navOpen ? 'rotate' : ''}`}
+          onClick={handleNavToggle}
+        />
+        <nav className={navOpen ? 'nav-open' : ''}>
+          <ul>
+            <li><a href="#home" onClick={handleNavItemClick}>Home</a></li>
+            <li><a href="#services" onClick={handleNavItemClick}>Services</a></li>
+            <li><a href="#team" onClick={handleNavItemClick}>Our Team</a></li>
+            <li><a href="#testimonials" onClick={handleNavItemClick}>Testimonials</a></li>
+            <li><a href="#about" onClick={handleNavItemClick}>About</a></li>
+            <li><a href="#quote" onClick={handleNavItemClick}>Request a Quote</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
-}
+};
 
 export default Header;
+
+
+
+
+
+
+
+
 
 

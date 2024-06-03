@@ -1,4 +1,3 @@
-/* src/styles/styles.css */
 
 /* Global Styles */
 body {
@@ -8,21 +7,29 @@ body {
   box-sizing: border-box;
   background-color: #f4f4f4;
   color: #333;
-}
-
-.app.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
+  padding-top: 60px; /* To avoid content overlap with fixed header */
+  text-align: center;
 }
 
 /* Header Styles */
 header {
   background-color: #006400;
-  padding: 20px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 header .logo {
@@ -30,7 +37,15 @@ header .logo {
   font-weight: bold;
 }
 
-header nav ul {
+header nav {
+  display: none;
+}
+
+nav.nav-open {
+  display: block;
+}
+
+nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -38,47 +53,81 @@ header nav ul {
   flex-wrap: wrap;
 }
 
-header nav ul li {
+nav ul li {
   margin-right: 20px;
 }
 
-header nav ul li a {
+nav ul li a {
   text-decoration: none;
   color: #fff;
   transition: color 0.3s;
 }
 
-header nav ul li a:hover {
+nav ul li a:hover {
   color: #ffcc00;
 }
 
-.app.dark-mode header nav ul li a {
-  color: #e0e0e0;
-}
-
-header .dark-mode-toggle {
-  background: none;
-  border: 2px solid #fff;
-  color: #fff;
-  padding: 10px;
+/* Responsive Nav Icon */
+.nav-icon {
+  display: none;
+  font-size: 24px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition: transform 0.3s;
+  margin-right: 20px; /* Add margin to prevent icon from being out of screen */
 }
 
-header .dark-mode-toggle:hover {
-  background-color: #fff;
-  color: #006400;
+.nav-icon.rotate {
+  transform: rotate(90deg);
 }
 
-.app.dark-mode header .dark-mode-toggle {
-  border-color: #e0e0e0;
-  color: #e0e0e0;
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .header-content {
+    justify-content: space-between;
+  }
+
+  nav {
+    position: absolute;
+    top: 60px; /* Adjust as needed */
+    right: 0;
+    background-color: #006400;
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .nav-icon {
+    display: block;
+  }
+
+  nav.nav-open ul {
+    display: flex;
+  }
 }
 
-.app.dark-mode header .dark-mode-toggle:hover {
-  background-color: #e0e0e0;
-  color: #1f1f1f;
+/* Media Query for Big Screens */
+@media (min-width: 769px) {
+  .nav-icon {
+    display: none;
+  }
+
+  header nav {
+    display: flex;
+  }
 }
+
+
+
 
 /* Main Content Styles */
 main {
@@ -104,8 +153,8 @@ section {
 
 /* Home Section */
 #home .hero {
-  background-image: url(C:\Users\malum\Documents\FCCSurveyPage\King-protea-projects\king-protea-projects\images\home.webp); /* Placeholder image */
-  background-size: cover;
+  background-image: url("../images/home.webp"); 
+  background-size:auto;
   background-position: center;
   text-align: center;
   padding: 100px 20px;
@@ -386,3 +435,58 @@ footer {
     font-size: 14px;
   }
 }
+
+
+/* src/styles/styles.css */
+
+.team-member {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  width: 100%; /* Ensure boxes take full width of the container */
+  max-width: 600px; /* Adjust as needed */
+  padding: 20px;
+  margin: 10px 0; /* Reduce vertical margin */
+  background-color: #fff;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a 3D effect */
+  transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.team-member:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.team-member img {
+  width: 150px; /* Adjust the width as needed */
+  height: 150px; /* Adjust the height as needed */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: contain; /* Ensure the image covers the entire container */
+  margin-right: 20px; /* Space between image and details */
+}
+
+.team-member-details {
+  flex: 1; /* Allow details to take up remaining space */
+  display: flex;
+  flex-direction: column; /* Arrange details vertically */
+  justify-content: center; /* Center details vertically */
+}
+
+.team-member-details h3 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.5em; /* Increase font size */
+  color: #006400; /* Dark green color */
+}
+
+.team-member-details p {
+  margin: 5px 0; /* Adjust margins as needed */
+  font-size: 1em; /* Standard font size */
+  color: #333; /* Dark grey color */
+}
+
+.team-members {
+  display: flex;
+  flex-direction: column; /* Arrange team members in a column */
+  align-items: center; /* Center the team members horizontally */
+  gap: 10px; /* Reduce the gap between team members */
+}
+
