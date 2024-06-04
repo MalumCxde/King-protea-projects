@@ -295,7 +295,8 @@ section {
 footer {
   background-color: #006400;
   color: #fff;
-  padding: 10px;
+  font-family:monospace;
+  padding: 5px;
   text-align: center;
   position: fixed;
   width: 100%;
@@ -437,8 +438,6 @@ footer {
 }
 
 
-/* src/styles/styles.css */
-
 .team-member {
   display: flex;
   align-items: center; /* Center items vertically */
@@ -475,12 +474,14 @@ footer {
   margin: 0; /* Remove default margin */
   font-size: 1.5em; /* Increase font size */
   color: #006400; /* Dark green color */
+  
 }
 
 .team-member-details p {
   margin: 5px 0; /* Adjust margins as needed */
   font-size: 1em; /* Standard font size */
   color: #333; /* Dark grey color */
+  font-style: italic;
 }
 
 .team-members {

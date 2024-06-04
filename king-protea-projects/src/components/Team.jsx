@@ -6,17 +6,19 @@ const Team = () => {
   // an array of team members with their information
   const teamMembers = [
     {
-      name: 'Njabulo Prince Motha',
-      position: 'Founder & CEO',
-      photo: '/images/Njabulo.png', 
-      philosophy: 'If You Love Land, You Will Make The Most Out Of It.'
+      name: "Njabulo Prince Motha",
+      position: "Founder & CEO",
+      photo: "/images/Njabulo.png",
+      philosophy:
+        "The visionary Director of King Protea Projects, is a dynamic leader with a deep passion for both people and business that drives the company’s mission to creating beautiful, sustainable designs that blend seamlessly with nature",
     },
     {
-      name:'Tshireletso Adams',
-      position: 'Co-Founder & Consultant',
-      photo: '/images/Adam.png',
-      philosophy: 'Nothing is Impossible'
-    }
+      name: "Tshireletso Adams",
+      position: "Co-Founder & Consultant",
+      photo: "/images/Adam.png",
+      philosophy:
+        "A young creative who immense himself in the world of possibilities of creativity. He always has a passion and interest in gardening, landscaping and outdoors.",
+    },
   ];
 
   return (

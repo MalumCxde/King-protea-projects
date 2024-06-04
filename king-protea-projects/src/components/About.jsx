@@ -6,7 +6,14 @@ function About() {
   return (
     <section id="about">
       <h2>About Us</h2>
-      <p>Learn more about King Protea Projects and our mission.</p>
+      <p>
+        We are dedicated to transforming ordinary spaces into extraordinary
+        environments through our comprehensive suite of services, including
+        architecture design, landscaping, interior design, and landscaping
+        management. Our mission is to create beautiful, functional, and
+        sustainable spaces that enhance the quality of life for our clients and
+        their communities.
+      </p>
     </section>
   );
 }
