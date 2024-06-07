@@ -1,5 +1,5 @@
-// src/components/Gallery.jsx
-import React from 'react';
+import React, { useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
 import '../styles/Gallery.css';
 
 const Gallery = () => {
@@ -13,24 +13,36 @@ const Gallery = () => {
     { src: '/images/7.jpg', alt: 'Design 7' },
     { src: '/images/8.jpg', alt: 'Design 8' },
     { src: '/images/9.jpg', alt: 'Design 9' },
-    { src: '/images/10.jpg', alt: 'Design 10' },
-    { src: '/images/11.jpg', alt: 'Design 11' },
     { src: '/images/12.jpg', alt: 'Design 12' },
     { src: '/images/13.jpg', alt: 'Design 13' },
     { src: '/images/14.jpg', alt: 'Design 14' },
     { src: '/images/15.png', alt: 'Design 15' }
-    
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleSwipeLeft = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const handleSwipeRight = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
+  const handlers = useSwipeable({
+    onSwipedLeft: handleSwipeLeft,
+    onSwipedRight: handleSwipeRight,
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true
+  });
+
   return (
-    <section id="gallery">
+    <section id="gallery" {...handlers}>
       <h1>Gallery</h1>
       <div className="gallery">
-        {images.map((image, index) => (
-          <div key={index} className="gallery-item">
-            <img src={image.src} alt={image.alt} />
-          </div>
-        ))}
+        <div className="gallery-image">
+          <img src={images[currentIndex].src} alt={images[currentIndex].alt} />
+        </div>
       </div>
     </section>
   );

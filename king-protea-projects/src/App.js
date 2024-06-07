@@ -9,6 +9,7 @@ import About from './components/About';
 import Quote from './components/Quote';
 import Footer from './components/Footer';
 import './styles/styles.css';
+import Gallery from './components/Gallery';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -24,7 +25,7 @@ function App() {
         <Home />
         <Services />
         <Team />
-        <Testimonials />
+        <Gallery />
         <About />
         <Quote />
       </main>
