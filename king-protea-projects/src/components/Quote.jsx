@@ -1,25 +1,33 @@
-// src/components/Quote.js
 import React from 'react';
-import '../styles/styles.css'; 
+import '../styles/styles.css';
 
-function Quote() {
+const Quote = () => {
   return (
-    <section id="quote">
-      <h2>Request A Quote</h2>
+    <section className="contact" id="quote">
+      <h2 className="heading">Request A <span>Quote</span></h2>
+
       <form>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+        <div className="input-box">
+          <input type="text" placeholder="Full name" name="name" required />
+          <input type="email" placeholder="Email address" name="email" required />
+        </div>
 
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+        <div className="input-box">
+          <input type="number" placeholder="Mobile number" name="phone-number" />
+          <input type="email" placeholder="Email subject" name="subject" required/>
+        </div>
 
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
+        <textarea cols="30" rows="10" placeholder="Your message" name="message" required></textarea>
 
-        <button type="submit">Submit</button>
+        {/* Form submit settings */}
+        <input type="text" name="_honey" style={{ display: 'none' }} />
+        <input type="hidden" name="_template" value="box" />
+        <input type="hidden" name="_captcha" value="false" />
+
+        <input type="submit" value="Request A Quote" className="btn" />
       </form>
     </section>
   );
-}
+};
 
 export default Quote;

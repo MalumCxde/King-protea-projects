@@ -26,7 +26,7 @@ const Gallery = () => {
 
   return (
     <section id="gallery">
-      <h1>Gallery</h1>
+      <h1 className='heading'>Gallery</h1>
       <div className="gallery-container">
         <div className="gallery" ref={galleryRef}>
           {images.map((image, index) => (

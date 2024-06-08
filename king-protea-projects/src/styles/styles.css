@@ -1,4 +1,11 @@
 
+:root {
+  --text-color: #333;
+  --primary-color: #006400;
+  --secondary-color: #ffcc00;
+  --background-color: #f5f6f7;
+  --snd-bg-color: #fff;
+}
 /* Global Styles */
 body {
   font-family: Arial, sans-serif;
@@ -73,7 +80,7 @@ nav ul li a:hover {
   font-size: 24px;
   cursor: pointer;
   transition: transform 0.3s;
-  margin-right: 20px; /* Add margin to prevent icon from being out of screen */
+  margin-right: 20px; 
 }
 
 .nav-icon.rotate {
@@ -246,47 +253,74 @@ section {
 }
 
 /* Quote Section */
-#quote form {
+
+
+.contact {
+  padding: 50px 20px;
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+.contact .heading {
+  margin: 3rem;
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.contact .heading span {
+  color: var(--primary-color);
+}
+
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact form .input-box {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-#quote label {
-  font-size: 18px;
-  color: #006400;
-  margin-bottom: 5px;
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  background: var(--snd-bg-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
 }
 
-#quote input,
-#quote textarea {
-  font-size: 16px;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+.contact form .input-box input {
+  width: calc(50% - 5px); /* Adjust width for better alignment */
 }
 
-#quote button {
-  padding: 10px 20px;
-  background-color: #006400;
+.contact form textarea {
+  width: 100%;
+  resize: none;
+}
+
+.contact form .btn {
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
   color: #fff;
+  background-color: var(--primary-color);
   border: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease; 
 }
 
-#quote button:hover {
-  background-color: #004d00;
+.contact form .btn:hover {
+  background-color: #004d00; 
 }
 
-.app.dark-mode #quote button {
-  background-color: #333;
-}
-
-.app.dark-mode #quote button:hover {
-  background-color: #444;
-}
 
 /* Footer Styles */
 footer {
@@ -438,14 +472,14 @@ footer {
 .team-member {
   display: flex;
   align-items: center; /* Center items vertically */
-  width: 100%; /* Ensure boxes take full width of the container */
-  max-width: 600px; /* Adjust as needed */
+  width: 100%; 
+  max-width: 600px; 
   padding: 20px;
   margin: 10px 0; /* Reduce vertical margin */
   background-color: #fff;
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a 3D effect */
-  transition: transform 0.2s; /* Smooth transition for hover effect */
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.2s; 
 }
 
 .team-member:hover {
@@ -453,11 +487,11 @@ footer {
 }
 
 .team-member img {
-  width: 150px; /* Adjust the width as needed */
-  height: 150px; /* Adjust the height as needed */
-  border-radius: 50%; /* Make the image circular */
-  object-fit: contain; /* Ensure the image covers the entire container */
-  margin-right: 20px; /* Space between image and details */
+  width: 150px; 
+  height: 150px; 
+  border-radius: 50%; 
+  object-fit: contain;
+  margin-right: 20px;
 }
 
 .team-member-details {
@@ -469,15 +503,15 @@ footer {
 
 .team-member-details h3 {
   margin: 0; /* Remove default margin */
-  font-size: 1.5em; /* Increase font size */
-  color: #006400; /* Dark green color */
+  font-size: 1.5em; 
+  color: #006400; 
   
 }
 
 .team-member-details p {
-  margin: 5px 0; /* Adjust margins as needed */
-  font-size: 1em; /* Standard font size */
-  color: #333; /* Dark grey color */
+  margin: 5px 0; 
+  font-size: 1em; 
+  color: #333; 
   font-style: italic;
 }
 
@@ -485,5 +519,5 @@ footer {
   display: flex;
   flex-direction: column; /* Arrange team members in a column */
   align-items: center; /* Center the team members horizontally */
-  gap: 10px; /* Reduce the gap between team members */
+  gap: 10px; 
 }
