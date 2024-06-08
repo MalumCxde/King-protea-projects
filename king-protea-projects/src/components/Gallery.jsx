@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { useSwipeable } from 'react-swipeable';
+import React, { useRef } from 'react';
 import '../styles/Gallery.css';
 
 const Gallery = () => {
@@ -19,33 +18,29 @@ const Gallery = () => {
     { src: '/images/15.png', alt: 'Design 15' }
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const galleryRef = useRef(null);
 
-  const handleSwipeLeft = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  const scroll = (scrollOffset) => {
+    galleryRef.current.scrollLeft += scrollOffset;
   };
-
-  const handleSwipeRight = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
-
-  const handlers = useSwipeable({
-    onSwipedLeft: handleSwipeLeft,
-    onSwipedRight: handleSwipeRight,
-    preventDefaultTouchmoveEvent: true,
-    trackMouse: true
-  });
 
   return (
-    <section id="gallery" {...handlers}>
+    <section id="gallery">
       <h1>Gallery</h1>
-      <div className="gallery">
-        <div className="gallery-image">
-          <img src={images[currentIndex].src} alt={images[currentIndex].alt} />
+      <div className="gallery-container">
+        <div className="gallery" ref={galleryRef}>
+          {images.map((image, index) => (
+            <div key={index} className="gallery-item">
+              <img src={image.src} alt={image.alt} />
+            </div>
+          ))}
         </div>
+        <div className="arrow arrow-left" onClick={() => scroll(-300)}>&#8249;</div>
+        <div className="arrow arrow-right" onClick={() => scroll(300)}>&#8250;</div>
       </div>
     </section>
   );
 };
 
 export default Gallery;
+
