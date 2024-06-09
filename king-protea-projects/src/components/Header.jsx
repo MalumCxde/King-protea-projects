@@ -31,7 +31,6 @@ const Header = () => {
             <li><a href="#services" onClick={handleNavItemClick}>Services</a></li>
             <li><a href="#gallery" onClick={handleNavItemClick}>Gallery</a></li>
             <li><a href="#team" onClick={handleNavItemClick}>Our Team</a></li>
-            <li><a href="#testimonials" onClick={handleNavItemClick}>Testimonials</a></li>
             <li><a href="#about" onClick={handleNavItemClick}>About</a></li>
             <li><a href="#quote" onClick={handleNavItemClick}>Request a Quote</a></li>
           </ul>

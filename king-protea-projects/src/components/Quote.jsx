@@ -14,7 +14,7 @@ const Quote = () => {
 
         <div className="input-box">
           <input type="number" placeholder="Mobile number" name="phone-number" />
-          <input type="email" placeholder="Email subject" name="subject" required/>
+          <input type="text" placeholder="Email subject" name="subject" required/>
         </div>
 
         <textarea cols="30" rows="10" placeholder="Your message" name="message" required></textarea>

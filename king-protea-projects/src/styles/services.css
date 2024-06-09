@@ -1,0 +1,113 @@
+#services {
+    padding: 3rem 0;
+    background-color: #f9f9f9;
+  }
+  
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .service {
+    display: flex;
+    width: calc(50% - 1rem); /* Two columns with a small gap between them */
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .service:hover {
+    transform: translateY(-5px); /* Add a slight lift effect on hover */
+  }
+  
+  .service-image {
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .service-image img {
+    width: 100%;
+    height: 100%; /* Ensure the image height matches the container height */
+    object-fit: cover; /* Cover the entire container without stretching the image */
+    object-position: center; /* Center the image within the container */
+    border-radius: 10px; /* Apply border radius to maintain rounded corners */
+  }
+  
+  .service-info {
+    flex: 1;
+    padding: 1.5rem;
+  }
+  
+  .service-info h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .service-info p {
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    #services {
+      padding: 2rem 0; /* Decrease padding */
+    }
+  
+    .services-container {
+      flex-direction: column; /* Switch to single column */
+      gap: 1.5rem; /* Reduce gap between items */
+      padding: 0 1rem; /* Add horizontal padding */
+    }
+  
+    .service {
+      flex-direction: column; /* Stack image and info vertically */
+      width: 100%; /* Full width for single column */
+      margin-bottom: 0rem; /* Add space between services */
+    }
+  
+    .service-image {
+      display: none; /* Hide the service-image container */
+    }
+  
+    .service-info {
+      padding: 1rem;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  
+    .service-info:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-info.architecture {
+      background-image: url('/src/images/Architect.jpg');
+    }
+  
+    .service-info.interior {
+      background-image: url('../images/Interior.jpg');
+    }
+  
+    .service-info.landscape {
+      background-image: url('../images/Lanscape.jpg');
+    }
+  
+    .service-info.maintenance {
+      background-image: url('../images/Maintaince.jpeg');
+    }
+  
+    .service-info h3 {
+      font-size: 1.2rem; 
+    }
+  
+    .service-info p {
+      font-size: 1rem; 
+    }
+  }
+  

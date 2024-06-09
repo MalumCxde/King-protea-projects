@@ -1,0 +1,64 @@
+#about {
+    padding: 3rem 0;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+  }
+  
+  .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  
+  
+  h2, h3 {
+    color: #006400; /* Adjust to your theme color */
+  }
+  
+  .overview, .company-statement, .client-feedback, .contact-us {
+    margin-bottom: 2rem;
+  }
+  
+  .overview p, .company-statement p, .contact-us p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  .client-feedback .feedback-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .feedback {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+.feedback:hover {
+  transform: translateY(-5px);
+}
+
+  .stars {
+    color: #ffcc00; /* Adjust to match your theme */
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-us p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .app.dark-mode #about {
+    background-color: #333;
+    color: #e0e0e0;
+  }
+  
+  .app.dark-mode .about-container h2, .app.dark-mode .about-container h3 {
+    color: #ffcc00; /* Adjust for dark mode theme */
+  }
+  

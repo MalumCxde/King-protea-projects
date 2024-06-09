@@ -148,6 +148,7 @@ section {
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
 }
 
 .app.dark-mode section {
@@ -157,13 +158,15 @@ section {
 
 /* Home Section */
 #home .hero {
-  background-image: url("../images/home.webp"); 
-  background-size:auto;
+  background-image: url("..//images/home.webp"); 
+  background-size:cover;
   background-position: center;
   text-align: center;
   padding: 100px 20px;
   color: #fff;
 }
+
+
 
 #home .hero h1 {
   font-size: 48px;
